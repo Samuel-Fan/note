@@ -44,28 +44,28 @@
 
 ### \<body>   
 
-#### 文字類：
+#### 文字：
 
-\<h1>-\<h6> : 標題 (heading)，數字越小重要性越高
+**\<h1>-\<h6>** : 標題 (heading)，數字越小重要性越高
 
-\<p> ： 文字段落 (paragraph)
+**\<p>** ： 文字段落 (paragraph)
 
-\<div> : 包裹文字的容器，性質為 block (會換行) 
+**\<div>** : 包裹文字的容器，性質為 block (會換行) 
   * 區塊元素(block) : 元素寬度預設會撐到最大，使其占滿整個容器，可以設定長寬/margin/padding，但仍會占滿一整行
   
-\<span> : 包裹文字的容器，性質為 inline (同一行) 容器
+**\<span>** : 包裹文字的容器，性質為 inline (同一行) 容器
   * 行內元素(inline) : 圖片或文字均不換行，也不會影響其版面配置，不可設定長寬，元素的寬高由它的內容撐開
   * 行內區塊(inline-block) : 以inline的方式呈現，但同時擁有block的屬性，可設定元素的寬高/margin/padding，可水平排列
 
-#### 區塊類：
+#### 區塊：
 
-\<header> : 標題區塊
+**\<header>** : 標題區塊
 
-\<section> : 用在有明顯含義的區塊，一般會有自己的標題\<h1-6>，如無含義應使用\<div>
+**\<section>** : 用在有明顯含義的區塊，一般會有自己的標題\<h1-6>，如無含義應使用\<div>
 
-\<article> : 與\<section>相似，但內容更獨立且完整，可能是一篇文章、一則留言，或像論壇中的一個回覆
+**\<article>** : 與\<section>相似，但內容更獨立且完整，可能是一篇文章、一則留言，或像論壇中的一個回覆
 
-\<nav> : 導航區塊(navigation)，可透過設置連結前往網頁中的特定區塊，相關寫法如：
+**\<nav>** : 導航區塊(navigation)，可透過設置連結前往網頁中的特定區塊，相關寫法如：
 ```
      <nav>
         <ul>
@@ -74,7 +74,59 @@
           <li><a href="#(id)">CSS</a></li>
         </ul>
       </nav>
-
 ```
+#### 序列：
 
+**\<ul>** : unordered list，無序列表，包裹\<li>
 
+**\<ol>** : oredered list，有序列表，包裹\<li>
+
+#### 表單：
+
+**\<form>** : 建立表單，重要屬性如：
+
+* action : 指定使用者送出表單後，送到的位址URL
+  
+* method : 指定資料傳輸時用的 HTTP 協議，分為"get"或"post"
+  * get : 通常用在資料量較小或非敏感的資料，因為資料會被放在網址中直接傳出，容易被直接看到資料
+  * post : 用在表單資料量比較大、有夾帶檔案上傳 (file upload) 或隱私性考量的資料
+
+**\<fieldset>** : 對表單內控制元素件進行分組，\<legend> 標籤通常是\<fieldset> 裡面的第一個元素作為該分組的標題
+
+**\<label>** : 用來給表單的控制元件一個說明標題，可搭配input, textarea, select等...
+
+**\<input>** : 不需要closing tag，重要屬性如：
+
+* name : 指定送出去的該筆資料要用什麼名稱，目的是讓遠端伺服器透過明確定義好的名稱去取出對應的欄位值
+  
+* type : 規定\<input>元素的類型，如text, email, radio(單選), checkbox(複選), date, number, password, file...
+
+* pattern : 使用text, email, password...等等時，可控制輸入類型的屬性: [字符限制]{字數限制}
+
+* placeholder : 預設顯示文字
+
+* required : 必填
+
+* checked : 預設勾選
+
+input type = "radio" 例子：
+```
+// 同 "name" 屬性之情況下擇一 //
+<label for="personal-account">
+  <input id="personal-account" type="radio" name="account-type" checked > Personal
+</label>
+<label for="business-account">
+  <input id="business-account" type="radio" name="account-type" > Business
+</label>
+```
+input type ="password" 例子：
+```
+<label for="new-password"> Create a New Password:
+  <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required />
+</label>
+```
+**\<textarea>** : 可輸入多行文字的輸入框，屬性如：
+
+* rows : 設定高是幾行，預設為 2
+  
+* cols : 設定寬度，預設為 20 
