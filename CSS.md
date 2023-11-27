@@ -35,11 +35,15 @@ span:not(.company) {
 ```
 .flex {
 ```
-6. 選擇特定element裡包含的特定class，空白鍵後直接加
+6. 選擇特定element容器中的特定class，空白鍵後直接加
 ```
-main .flex {
+h1 .company {
 ```
-7. 第(index)幾個element(class)、首個、最後一個
+7. 選擇具特定element及特定屬性值的目標，跟上一個差別在不加空白鍵
+```
+h1.flex {
+```
+8. 第(index)幾個element(class)、首個、最後一個
 ```
 span:nth-of-type(index) {
 span:first-of-type {
