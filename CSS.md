@@ -19,30 +19,30 @@
 ```
 main {
 ```
-2. 選擇只有only特定屬性、特定屬性值的element
+2. 選擇只有特定屬性值(唯一)的element
 ```
-h1[class] {
 h1[class="flex"] {
 ```
-3. 選擇包含特定屬性的element
+3. 選擇有特定屬性值(非唯一)的element
 ```
 h1[class~="flex"]{
 ```
-4. 直接選擇class屬性，需加"."
+4. 排除特定屬性值
+```
+span:not(.company) {
+```
+5. 直接選擇class屬性，需加"."
 ```
 .flex {
 ```
-5. 選擇特定element裡包含的特定class，空白鍵後直接加
+6. 選擇特定element裡包含的特定class，空白鍵後直接加
 ```
 main .flex {
 ```
-6. 第(index)幾個element(class)、首個、最後一個
+7. 第(index)幾個element(class)、首個、最後一個
 ```
 span:nth-of-type(index) {
 span:first-of-type {
 span:last-of-type {
 ```
-7. 排除特定屬性值
-```
-span:not(.company) {
-```
+
