@@ -14,11 +14,29 @@
 
 ### \<head\>  
 ##### 常用元素：
+
 * \<title> : 網頁只能有一個標題，裡面的內容會顯示在書籤頁。
-* \<metas> : self-closing(不需要結尾標籤)，常用的：
-  1. \<meta charset="UTF-8"> : 告訴瀏覽器這個網頁所用的編碼方式。
-  2. \<meta name="description" content="網頁簡短描述"> : 用來寫網頁的簡短描述。
-  3. \<meta name="keywords" content="網頁關鍵字"> : 網頁關鍵字。
-  4. \<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-* \<link>
-* \<style> : 用CSS取代比較好。
+  
+* \<metas> : self-closing(不需要結尾標籤)，常用的如：
+  ```
+  <meta charset="UTF-8">
+  <meta name="description" content="網頁簡短描述">
+  <meta name="keywords" content="網頁關鍵字">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ```
+  * charset : 告訴瀏覽器這個網頁所用的編碼方式。
+     
+  * description : 用來寫網頁的簡短描述。
+     
+  * keywords : 網頁關鍵字。
+     
+  * viewport : 設計手機行動版網頁或響應式(RWD, Responsive Web Design) 網頁時，定義畫面：
+     *  width=device-width 指定瀏覽器頁面的寬度同裝置 (device) 的寬度
+     *  initial-scale=1.0 指定畫面初始縮放比例為 100%，即不放大也不縮小
+     *  minimum-scale=1, maximum-scale=1"　可防止縮放
+        
+* \<link> : 可以用來載入或定義網頁中會用到的資源 (resource)，如：
+  ```
+  <link rel="stylesheet" href="styles.css" >
+  ```
+* \<style> : 可用CSS語法來設計網頁外觀。
