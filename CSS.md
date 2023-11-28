@@ -79,7 +79,12 @@ span:last-of-type {
 
 * font-size : 字體大小
 * font-family : 字體種類
-* text-align : left 靠左, right 靠右, center 置中, justify 左右對齊
+* text-align : left 靠左，right 靠右，center 置中，justify 左右對齊
 * letter-space : 字元間距
 * font-weight : 字體粗細 (100-900, 以100為單位共9種 , 400 = normal, 700 = bold)
-* 
+* font-style : normal常規字體，italic斜體，oblique斜角(italic某些字體不適用時)
+
+#### display 
+
+* block : 區塊元素，撐滿容器，如\<div>預設值
+* inline : 行內元素，
