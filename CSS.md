@@ -105,3 +105,9 @@ span:last-of-type {
     * center : 對齊交錯軸線中央
     * stretch : 預設值，將內容元素撐開至 flexbox 大小
     * baseline : 對齊內容物(文字)的基線
+   
+  * flex-wrap : 內元件排列後，超過外容器主軸時的表現，分為:
+    * nowrap : 讓元件超出去
+    * wrap : 換行
+    * wrap-reverse : 往反方向換行
+    * 
