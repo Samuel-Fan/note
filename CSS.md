@@ -104,4 +104,4 @@ span:last-of-type {
     * flex-end : 對齊交錯軸線最末端
     * center : 對齊交錯軸線中央
     * stretch : 預設值，將內容元素撐開至 flexbox 大小
-    * baseline : 對齊內容物的基線
+    * baseline : 對齊內容物(文字)的基線
