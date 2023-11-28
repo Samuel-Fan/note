@@ -87,4 +87,21 @@ span:last-of-type {
 #### display 
 
 * block : 區塊元素，撐滿容器，如\<div>預設值
-* inline : 行內元素，
+* inline : 行內元素，與其他行內元素並排在同一列，由內容決定寬高，如\<span>預設
+* inline-block: 行內區塊，以inline的方式呈現，但同時擁有block的屬性，可設定寬高
+* **flex** : flex box，類似inline會並排在同一列，有雙軸(主軸、交錯軸)概念
+  * flex-direction : 決定主軸方向，分為 row、row-reverse、column、column-reverse
+  * justify-content : 主軸對齊，分為:
+    
+    * flex-start : 預設值，對齊主軸線最前端
+    * flex-end : 對齊主軸線最終端
+    * center : 對齊主軸線中央
+    * space-around : 平均分配寬度和間距
+    * space-between : 平均分配寬度，第一項和最後一項貼齊邊緣
+      
+  * align-items : 對其交錯軸，分為:
+    * flex-start : 對齊交錯軸線最前端
+    * flex-end : 對齊交錯軸線最末端
+    * center : 對齊交錯軸線中央
+    * stretch : 預設值，將內容元素撐開至 flexbox 大小
+    * baseline : 對齊內容物的基線
