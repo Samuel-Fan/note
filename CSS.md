@@ -50,3 +50,36 @@ span:first-of-type {
 span:last-of-type {
 ```
 
+#### 單位
+
+1. px : pixel 絕對單位
+2. % : 相對於上一層的值
+3. 相對字體寬度(也可用於padding、margin等) : 
+* em : 1em = 上一層font-size之大小
+* rem : 1rem = 最上層font-size之大小(通常是body)
+4. 可視範圍大小 :
+* vw : viewport width (100vw = 整個視窗寬度的比例，滿版不會有捲軸)
+* vh : viewport height (100vh = 整個視窗高度的比例)
+  
+#### padding、margin、borden
+
+1. padding : 元素內所有內容與元素自身的邊界間距
+
+2. margin : 元素與元素之間的邊界間距
+
+3. border : 元素最外層的邊界
+
+![padding、margin、borden](https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png)
+
+* box-sizing : content-box -> width/height = content width/height 
+
+* box-sizing : border-box -> width/height = border + padding + content width/height
+
+#### 文字
+
+* font-size : 字體大小
+* font-family : 字體種類
+* text-align : left 靠左, right 靠右, center 置中, justify 左右對齊
+* letter-space : 字元間距
+* font-weight : 字體粗細 (100-900, 以100為單位共9種 , 400 = normal, 700 = bold)
+* 
