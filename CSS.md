@@ -127,7 +127,7 @@ span:last-of-type {
 
 #### 其他
 
-### 位置 
+##### 位置 
 * position : 決定元素的位置
   * static : 取消定位特性
   * relative : 相對位置，可設top, bottom, left, right值使其偏移
@@ -135,14 +135,14 @@ span:last-of-type {
   * fixed : 決對位置，獨立一層，會黏在畫面上(類似甩不掉的廣告那種)
   * sticky : 畫面捲動時，會同時位移，效果只限上一層容器
 
-### 游標
+##### 游標
 ```
 .class:hover {
 color : white; 
 cursor : pointer;
 }
 ```
-### 限sr(screen-reader)only
+##### 限sr(screen-reader)only
 ```
 //暫時不懂，晚點再研究
 //有!important 不會被其他設定蓋掉
@@ -160,7 +160,7 @@ span[class~="sr-only"] {
 }
 ```
 
-### 半透明背景
+##### 半透明背景
 ```
 body {
   color:black;
