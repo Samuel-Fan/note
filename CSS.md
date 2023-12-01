@@ -91,7 +91,12 @@ span:last-of-type {
  
 #### 圖片
 
-* aspect-ratio: 長寬比
+* aspect-ratio : 長寬比
+* object-fit : 決定圖片(元素)如何調整至鎖定大小的容器中
+  * fill : 縮放到滿版(會變形)
+  * contain : 長邊填充元素，維持長寬比(會有空白處)
+  * cover : 維持長寬比，滿版，超出部分被截掉
+  * none : 原尺寸
 
 #### display 
 
@@ -152,5 +157,13 @@ span[class~="sr-only"] {
   white-space: nowrap ;
   padding: 0 ;
   margin: -1px ;
+}
+```
+
+### 半透明背景
+```
+body {
+  color:black;
+  background:linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.9)), url(...);
 }
 ```
