@@ -80,9 +80,18 @@ span:last-of-type {
 * font-size : 字體大小
 * font-family : 字體種類
 * text-align : left 靠左，right 靠右，center 置中，justify 左右對齊
+* text-decoration : underline 底線 (可搭配 dotted, wavy, color等特效) 
 * letter-space : 字元間距
 * font-weight : 字體粗細 (100-900, 以100為單位共9種 , 400 = normal, 700 = bold)
 * font-style : normal常規字體，italic斜體，oblique斜角(italic某些字體不適用時)
+* overflow : 文字(元素)溢滿容器時，依以下設定表示：
+  * visible : 可以看見文字超出去的部分
+  * hidden : 隱藏超出去的部分
+  * scroll : 新增捲軸
+ 
+#### 圖片
+
+* aspect-ratio: 長寬比
 
 #### display 
 
@@ -110,4 +119,38 @@ span:last-of-type {
     * nowrap : 讓元件超出去
     * wrap : 換行
     * wrap-reverse : 往反方向換行
-    * 
+
+#### 其他
+
+### 位置 
+* position : 決定元素的位置
+  * static : 取消定位特性
+  * relative : 相對位置，可設top, bottom, left, right值使其偏移
+  * absolute : 絕對位置，不與其他元素排列，自己獨立一層
+  * fixed : 決對位置，獨立一層，會黏在畫面上(類似甩不掉的廣告那種)
+  * sticky : 畫面捲動時，會同時位移，效果只限上一層容器
+
+### 游標
+```
+.class:hover {
+color : white; 
+cursor : pointer;
+}
+```
+### 限sr(screen-reader)only
+```
+//暫時不懂，晚點再研究
+//有!important 不會被其他設定蓋掉
+span[class~="sr-only"] {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) ;
+  clip-path: inset(50%) ;
+  height: 1px ;
+  width: 1px ;
+  position: absolute ;
+  overflow: hidden ;
+  white-space: nowrap ;
+  padding: 0 ;
+  margin: -1px ;
+}
+```
