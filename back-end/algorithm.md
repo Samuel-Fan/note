@@ -1,3 +1,4 @@
+以下筆記引用自Udemy上Wilson Ren老師之「資料結構與演算法 (JavaScript)」課程
 # Big O notation
 ## 定義
 待補
