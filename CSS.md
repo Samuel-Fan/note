@@ -69,7 +69,7 @@ span:last-of-type {
 
 3. border : 元素最外層的邊界
 
-![padding、margin、borden](https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png)
+![padding、margin、borden](https://raw.githubusercontent.com/Samuel-Fan/photo/main/123.png)
 
 * box-sizing : content-box -> width/height = content width/height 
 
