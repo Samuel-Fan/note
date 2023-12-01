@@ -134,7 +134,8 @@ span:last-of-type {
   * absolute : 絕對位置，不與其他元素排列，自己獨立一層
   * fixed : 決對位置，獨立一層，會黏在畫面上(類似甩不掉的廣告那種)
   * sticky : 畫面捲動時，會同時位移，效果只限上一層容器
-
+* z-index : 在有設position的情況下，z-index高的在上面
+  
 ##### 游標
 ```
 .class:hover {
