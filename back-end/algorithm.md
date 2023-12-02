@@ -12,6 +12,7 @@
 * O(2^n)： Exponential time
 * O(N!)： Factorial time
 ### binarySearch
+題目:找arr中數字為n之值，
 時間複雜度由linearSearch 的 O(n) 降為 O(logn)
 ```
 function binarySearch(arr, n) {
@@ -36,6 +37,8 @@ function binarySearch(arr, n) {
 }
 ```
 ### counter
+題目:從兩個arr中找到交集的數字，
+時間複雜度由雙迴圈的 O(n2) 降為 O(n)
 ```
 function intersection(n, m) {
   let arr1 = [];
@@ -62,4 +65,34 @@ function intersection(n, m) {
 }
 
 intersection([15, 3, 6, 8, 24, 16], [11, 3, 9, 6, 15, 8]);
+```
+### pointer
+題目：找arr內平均值=avg的組合，
+時間複雜度由雙迴圈的 O(n2) 降為 O(n)
+```
+//averagePair([-11,0,1,2,3,9,14,17,21],1.5);
+let step = 0;
+function averagePair(arr, avg) {
+  let i = 0;
+  let j = arr.length - 1;
+  let result = [];
+  while (i <= j) {
+    if ((arr[i] + arr[j]) / 2 > avg) {
+      j--;
+      step++;
+    } else if ((arr[i] + arr[j]) / 2 < avg) {
+      i++;
+      step++;
+    } else if ((arr[i] + arr[j]) / 2 === avg) {
+      result.push([arr[i], arr[j]]);
+      i++;
+      j--;
+      step++;
+    }
+  }
+  return result;
+}
+
+console.log(averagePair([-11, 0, 1, 2, 3, 9, 14, 17, 21], 1.5));
+console.log(step);
 ```
