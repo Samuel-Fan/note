@@ -4,6 +4,7 @@
 * bubble sort
 * insertion sort
 * selection sort
+* merge sort 
 
 ## 高時間複雜度的sorting方法
 * bubble sort
