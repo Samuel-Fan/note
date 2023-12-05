@@ -110,7 +110,8 @@ span:last-of-type {
     * flex-start : 預設值，對齊主軸線最前端
     * flex-end : 對齊主軸線最終端
     * center : 對齊主軸線中央
-    * space-around : 平均分配寬度和間距
+    * space-around : 平均分配寬度和間距，小方塊與父容器之間的間隔是小方塊彼此間隔的一半
+    * space-evenly : 平均分配寬度和間距，每個小方塊之間和與父容器之間擁有相同的間隔
     * space-between : 平均分配寬度，第一項和最後一項貼齊邊緣
       
   * align-items : 對其交錯軸，分為:
