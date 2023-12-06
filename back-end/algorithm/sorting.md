@@ -5,7 +5,8 @@
 * insertion sort
 * selection sort
 * merge sort 
-
+* heap sort
+  
 ## 高時間複雜度的sorting方法
 * bubble sort
 * insertion sort
@@ -33,7 +34,8 @@
 時間複雜度 = O(n<sup>2</sup>)<br />
 
 ## 低時間複雜度的sorting方法
-* merge sort 
+* merge sort
+* heap sort
 ### merge sort <br />
 將長度為n之矩陣一分為二，直到變成n個長度為1的陣列，
 此時將陣列兩兩依大小排列合併，成為n/2個長度為2的陣列(共計算n次)，
@@ -76,4 +78,49 @@ function mergeSort(arr){
     return merge(mergeSort(left),mergeSort(right));
   }
 }
+```
+### heap sort 
+```
+let heapSize = arr.length - 1
+
+
+
+function buildMaxHeap(){
+  for (let i = Math.floor(heapSize/2); i>=0 ; i--){
+    maxHeapify(i);
+  }
+}
+
+function maxHeapify(i) {
+  let l = 2 * i + 1 ;
+  let r = 2 * i + 2 ;
+  let largest;
+  if (l <= heapSize && arr[l] > arr[i]){
+    largest = l;
+  } else {
+    largest = i;
+  }
+  if (r <= heapSize && arr[r] > arr[largest]){
+    largest = r;
+  }
+  if (largest !== i) {
+    let temp = arr[i]; 
+    arr[i] = arr[largest]; 
+    arr[largest] = temp; 
+    maxHeapify(largest);
+  }
+}
+
+function heapSort(arr){
+    buildMaxHeap();
+    for (let i = heapSize; i>=0; i--){
+      let temp = arr[0];
+      arr[0] = arr[heapSize];
+      arr[heapSize] = temp;
+      heapSize--;
+      buildMaxHeap();
+    }
+}
+heapSort(arr);
+console.log(arr);
 ```
