@@ -54,8 +54,10 @@ function intersection(n, m) {
 intersection([15, 3, 6, 8, 24, 16], [11, 3, 9, 6, 15, 8]);
 ```
 ### pointer
-題目：找arr內平均值=avg的組合，
-時間複雜度由雙迴圈的 O(n2) 降為 O(n)
+在矩陣中，設定兩點(如left = 0、right = i)，依需求移動兩點(left ++，right ++)
+
+
+題目：找arr內平均值=avg的組合，時間複雜度由雙迴圈的 O(n2) 降為 O(n)
 ```
 //averagePair([-11,0,1,2,3,9,14,17,21],1.5);
 let step = 0;
