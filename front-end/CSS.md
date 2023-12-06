@@ -126,9 +126,17 @@ span:last-of-type {
     * wrap : 換行
     * wrap-reverse : 往反方向換行
 
-#### 其他
+#### Media queries
 
-##### 全域變數
+根據裝置的不同來呈現不同畫面，如以下語法限制當畫面寬度在 1000 px 以內時，body 套用顏色：
+```
+@media (max-width: 1000px) {
+  body {
+  background : black;
+}
+```
+
+#### 全域變數
 宣告：
 ```
 :root {
@@ -141,7 +149,7 @@ element {
 background : var(--var-name);
 }
 ```
-##### 位置 
+#### 位置 
 * position : 決定元素的位置
   * static : 取消定位特性
   * relative : 相對位置，可設top, bottom, left, right值使其偏移
@@ -150,7 +158,7 @@ background : var(--var-name);
   * sticky : 畫面捲動時，會同時位移，效果只限上一層容器
 * z-index : 在有設position的情況下，z-index高的在上面
   
-##### 游標
+#### 游標
 ```
 .class:hover {
 color : white; 
@@ -158,20 +166,27 @@ cursor : pointer;
 }
 ```
 
-##### 漸層
-顏色漸層
-以下語法，90deg = 方向，0\~10% = color 1 單色，10\~15% = color1 ~ color2漸層，重複至填滿100%
+#### 漸層
+顏色漸層，語法如下：</br></br>
+linear-gradient : 單方向
+90deg => 左到右，</br>
+0\~10% => color 1 單色</br>
+10\~15% => color1 ~ color2漸層</br>
+repeating : 重複至填滿100%</br></br>
+radial-gradient : 輻射狀</br>
 ```
 element{
 background: repeating-linear-gradient(
       90deg,
-      var(--building-color1),
-      var(--building-color1) 10%,
-      var(--building-color2) 15%
-    );
+      color1,
+      color1 10%,
+      color2 15%
+    ), radial-gradient(
+      color1 ,
+      color 2)
+)
 }
 ```
-linear-gradient(方向(如 90deg)，顏色1，顏色1
 
 半透明背景
 ```
