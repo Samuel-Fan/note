@@ -6,6 +6,7 @@
 * selection sort
 * merge sort 
 * heap sort
+* quick sort
   
 ## 高時間複雜度的sorting方法
 * bubble sort
@@ -36,6 +37,7 @@
 ## 低時間複雜度的sorting方法
 * merge sort
 * heap sort
+* quick sort
 ### merge sort <br />
 將長度為n之矩陣一分為二，直到變成n個長度為1的陣列，
 此時將陣列兩兩依大小排列合併，成為n/2個長度為2的陣列(共計算n次)，
@@ -80,10 +82,16 @@ function mergeSort(arr){
 }
 ```
 ### heap sort 
+必須先知道的東西：
+* binary tree：由單獨的root衍伸出來，每個分支最多兩個child node的結構，如下圖所示，若排列依序為從上到下，從左到右，則稱為complete binary tree </br>
+![binary_tree2](https://raw.githubusercontent.com/Samuel-Fan/photo/main/binary-tree-2.JPG)
+
+* max-heap binary tree：每一個分支(leaf)的parent node皆大於child node，此時最大值會位於root
+
+**heap sort**將矩陣化為max-heap binary tree，此時將最大值( root, index = 0 )與最末端的值( index = arr.lengh-1 )互換，則最大值已排序完成(位於矩陣最末位)，再將剩餘部分化為max-heap binary tree，最大值( root )與最末端前一個值交換( index = arr.length-2 )，次大值完成排序。重複進行上述步驟，直到完成整個矩陣的排序。</br>
+
 ```
 let heapSize = arr.length - 1
-
-
 
 function buildMaxHeap(){
   for (let i = Math.floor(heapSize/2); i>=0 ; i--){
@@ -118,9 +126,15 @@ function heapSort(arr){
       arr[0] = arr[heapSize];
       arr[heapSize] = temp;
       heapSize--;
-      buildMaxHeap();
+      maxHeapify(0);
     }
 }
 heapSort(arr);
 console.log(arr);
 ```
+##### heapSort 時間複雜度為 = buildMaxHeap 時間複雜度 + (forloop 結合 maxHeapify) 的時間複雜度
+* buildMaxHeap 時間複雜度 = O(nlogn)
+* forloop 時間複雜度 = O(n)
+* maxHeapify 時間複雜度 = O(log<sub>2</sub>n)= O(logn)
+
+Result: 時間複雜度 = nlogn + n * logn => O(nlogn)
