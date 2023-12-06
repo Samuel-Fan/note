@@ -69,7 +69,7 @@ span:last-of-type {
 
 3. border : 元素最外層的邊界
 
-![padding、margin、borden](https://raw.githubusercontent.com/Samuel-Fan/photo/main/123.png)
+![padding、margin、borden](https://raw.githubusercontent.com/Samuel-Fan/photo/main/border_padding_margin.png)
 
 * box-sizing : content-box -> width/height = content width/height 
 
@@ -128,6 +128,19 @@ span:last-of-type {
 
 #### 其他
 
+##### 全域變數
+宣告：
+```
+:root {
+--var-name: color;
+}
+```
+使用：
+```
+element {
+background : var(--var-name);
+}
+```
 ##### 位置 
 * position : 決定元素的位置
   * static : 取消定位特性
@@ -144,6 +157,30 @@ color : white;
 cursor : pointer;
 }
 ```
+
+##### 漸層
+顏色漸層
+以下語法，90deg = 方向，0\~10% = color 1 單色，10\~15% = color1 ~ color2漸層，重複至填滿100%
+```
+element{
+background: repeating-linear-gradient(
+      90deg,
+      var(--building-color1),
+      var(--building-color1) 10%,
+      var(--building-color2) 15%
+    );
+}
+```
+linear-gradient(方向(如 90deg)，顏色1，顏色1
+
+半透明背景
+```
+body {
+  color:black;
+  background:linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.9)), url(...);
+}
+```
+
 ##### 限sr(screen-reader)only
 ```
 //暫時不懂，晚點再研究
@@ -159,13 +196,5 @@ span[class~="sr-only"] {
   white-space: nowrap ;
   padding: 0 ;
   margin: -1px ;
-}
-```
-
-##### 半透明背景
-```
-body {
-  color:black;
-  background:linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.9)), url(...);
 }
 ```
