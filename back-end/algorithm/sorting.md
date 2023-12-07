@@ -137,7 +137,7 @@ console.log(arr);
 * forloop 時間複雜度 = O(n)
 * maxHeapify 時間複雜度 = O(log<sub>2</sub>n)= O(logn)
 
-Result: 時間複雜度 = nlogn + n * logn => O(nlogn)
+Result: 時間複雜度 = n + n * logn => O(nlogn)
 
 ### quick sort
 將陣列最末端的元素訂為pivot，如下：</br></br>
