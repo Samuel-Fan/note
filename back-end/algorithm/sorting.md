@@ -133,7 +133,7 @@ heapSort(arr);
 console.log(arr);
 ```
 ##### heapSort 時間複雜度為 = buildMaxHeap 時間複雜度 + (forloop 結合 maxHeapify) 的時間複雜度
-* buildMaxHeap 時間複雜度 = O(nlogn)
+* buildMaxHeap 時間複雜度 = O(n)
 * forloop 時間複雜度 = O(n)
 * maxHeapify 時間複雜度 = O(log<sub>2</sub>n)= O(logn)
 
