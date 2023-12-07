@@ -138,3 +138,41 @@ console.log(arr);
 * maxHeapify 時間複雜度 = O(log<sub>2</sub>n)= O(logn)
 
 Result: 時間複雜度 = nlogn + n * logn => O(nlogn)
+
+### quick sort
+將陣列最末端的元素訂為pivot，如下：</br></br>
+５｜２｜１｜６｜３｜**４ = pivot** </br></br>
+將其他元素與pivot比大小，依大小分為兩個陣列，如</br></br>
+２｜１｜３  &  ６｜５  ，將pivot與右陣列的第一個值互換，呈以下陣列：</br></br>
+２｜１｜３｜**４**｜５｜６　</br></br>此時可確定４位於已排序好的位置，接下來以４為分界，左右兩陣列分別再訂出一個pivot值，重複上述步驟，直到陣列排序完成
+
+```
+let arr = [...];
+function partition(p,r){
+  let i = p - 1;
+  let x = arr[r];
+  for (let j = p; j<r ; j++){
+    if (arr[j] <= x) {
+      i++;
+      let temp = arr[j];
+      arr[j] = arr[i];
+      arr[i] = temp;
+    }
+  }
+  let temp = arr[r];
+  arr[r] = arr[i+1];
+  arr[i+1] = temp;
+  return i+1;
+}
+
+function quickSort(p,r){
+  if ( p < r ) {
+    let q = partition(p,r);
+    quickSort(p,q-1);
+    quickSort(q+1,r);
+  }
+}
+
+quickSort(0,arr.length-1);
+console.log(arr);
+```
