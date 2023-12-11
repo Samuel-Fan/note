@@ -120,12 +120,24 @@ span:last-of-type {
     * center : 對齊交錯軸線中央
     * stretch : 預設值，將內容元素撐開至 flexbox 大小
     * baseline : 對齊內容物(文字)的基線
-   
+
+  * place-items : 同時設定 justify-content 及 align-items
+
   * flex-wrap : 內元件排列後，超過外容器主軸時的表現，分為:
     * nowrap : 讓元件超出去
     * wrap : 換行
     * wrap-reverse : 往反方向換行
 
+* **grid** : 網格排列，有列(row)、行(column)概念
+  * justify-content : 同flex的用法
+  * align-items : 同flex的用法
+  * grid-template-columns(rows):
+    * 1fr 500px 1fr -> 分成3格，中間為500px，其他兩個1:1分配
+    * repeat(5,1fr) -> 分成5格，比例為1:1:1:1:1
+  * column-width : 單一行寬度，會依容器總寬度分配行數
+  * grid-column(rows): 開始的位置/結束的位置 (分3個行時，最左為 1，最右為 4 (或-1)
+  * grid-auto-flow : row (以塞滿列優先，為預設選項) column (以塞滿行為優先)
+  * column(row)-gap: 行、列間距
 #### Media queries
 
 根據裝置的不同來呈現不同畫面，如以下語法限制當畫面寬度在 1000 px 以內時，body 套用顏色：
