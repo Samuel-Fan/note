@@ -63,7 +63,14 @@
 
 * alt : 如圖片無法顯示時，會顯示的替代文字
 
-* title : 滑鼠滑過圖片時，會顯示的文字 
+* title : 滑鼠滑過圖片時，會顯示的文字
+
+**\<i>** : 顯示icon，用class設定圖案，如
+* class= "fab fa-facebook-f"
+* class= "fab fa-twitter"
+* class= "fab fa-instagram"
+* class= "fab fa-linkedin-in"
+* class= "fab fa-youtube"
 
 #### 區塊：
 
