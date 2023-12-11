@@ -207,6 +207,31 @@ body {
   background:linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.9)), url(...);
 }
 ```
+#### 動畫
+語法(設定 0 ~ 100 % 特性)：
+```
+@keyframes name {
+//初始條件
+  0% {
+    color: green;
+  }
+//結束條件
+  100% {
+    color: green;
+}
+}
+```
+在相對應的CSS元素中，相關屬性如下：
+  * animation-name : 輸入keyframes name 產生連結
+  * animation-duration : 持續時間
+  * animation-iteration-count: 重複次數
+  * animation-timing-function :
+    * linear : 線性動作
+    * ease-in-out : 初始、結束時較緩慢
+可一次性設定相關屬性，如
+```
+animation : name 10s(duration) ease-in-out(timing-function) infinite(count);
+```
 
 ##### 限sr(screen-reader)only
 ```
