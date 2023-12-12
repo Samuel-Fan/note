@@ -71,6 +71,7 @@
 * class= "fab fa-instagram"
 * class= "fab fa-linkedin-in"
 * class= "fab fa-youtube"
+註：要搭配Font Awesome的stylesheet
 
 #### 區塊：
 
