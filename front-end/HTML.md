@@ -65,13 +65,12 @@
 
 * title : 滑鼠滑過圖片時，會顯示的文字
 
-**\<i>** : 顯示icon，用class設定圖案，如
+**\<i>** : 顯示icon，用class設定圖案(要搭配Font Awesome的stylesheet)，如
 * class= "fab fa-facebook-f"
 * class= "fab fa-twitter"
 * class= "fab fa-instagram"
 * class= "fab fa-linkedin-in"
-* class= "fab fa-youtube"
-註：要搭配Font Awesome的stylesheet
+* class= "fab fa-youtube" </br>
 
 #### 區塊：
 
