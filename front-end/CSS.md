@@ -68,6 +68,7 @@ span:last-of-type {
 2. margin : 元素與元素之間的邊界間距
 
 3. border : 元素最外層的邊界
+###### 註: 類似屬性：outline
 
 ![padding、margin、borden](https://raw.githubusercontent.com/Samuel-Fan/photo/main/border_padding_margin.png)
 
